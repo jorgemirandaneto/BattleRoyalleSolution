@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome da Maquina</th>
+      <th scope="col">Ip</th>
+      <th scope="col">Antivirus Ativo</th>
+      <th scope="col">Versão do windows</th>
+      <th scope="col">Versão do .Net FrameWork</th>
+      <th scope="col">Tamanho do HD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of pcInfoLista" (click) = "onSelectMaquina(p)">
+      <td></td>
+      <td>{{p.nomeMaquina}}</td>
+      <td>{{p.ip}}</td>
+      <td>{{p.antiVirus}}</td>
+      <td>{{p.versaoWindows}}</td>
+      <td>{{p.versaoNetFramework}}</td>
+      <td>{{p.hdSize}}</td>
+      <td *ngIf = "btnAcesso">
+        <button type="button" class="btn btn-light">Acessar</button>
+      </td>
+</tr>
+  </tbody>
+</table>
+
